@@ -1,15 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title><%= yield(:title)%> | Ruby on Rails Tutorial Sample App</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+    <head>
+        <title> <%= full_title(yield(:title)) %> </title>
+        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+        <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <header class="navbar navbar-fixed-top navbar-inverse">
+            <div class="contaner">
+                <%= link_to "sample app", root_path, id: "logo" %>
+                <nav>
+                    <ul class="nav navbar-nav pull-right">
+                        <li> <%= link_to "Home", root_path %> </li>
+                        <li> <%= link_to "Help", help_path %> </li>
+                        <li> <%= link_to "Login", '#' %></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="container">
+            <%= yield %>
+        </div>
+        <footer class="footer">
+            <small>
+                The <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a> by <a href="http://www.machaelhartl.com/">Michael Hartl</a>
+            </small>
+            <nav>
+                <ul>
+                    <li> <%= link_to "About", about_path %> </li>
+                    <li> <%= link_to "Contact", contact_path %> </li>
+                    <li><a href="http://news.railstutorial.org/">News</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
 </html>
+
+
 
