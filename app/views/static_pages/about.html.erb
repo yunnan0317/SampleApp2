@@ -1,6 +1,138 @@
-<% provide(:title, "About") %>
-<h1>About</h1>
-<p>
-    The <a href="http://www.railstutorial.org/"><em>Ruby on Rails Tutorial</em></a> is a <a href="http://www.railstutorial.org/book">book</a> and <a href="http://screencast.railstutorial.org">screencast series</a> to teach web development with <a href="http>//rubyontails.org/">Ruby on Rails</a>.
-    This is the sample application for the tutorial.
-</p>
+<div class="side-nav" role="navigation">
+    <ul class="nav-side-nav">
+        <li><%= link_to "","#firstpage", :class => "tooltip-side-nav" %></li>
+        <li><%= link_to "","#secondpage", :class => "tooltip-side-nav"  %></li>
+        <li><%= link_to "","#fourthpage", :class => "tooltip-side-nav"  %></li>
+        <li><%= link_to "","#fifth", :class => "tooltip-side-nav"  %></li>
+
+     </ul>
+</div>
+<div class="firstpage" id="firstpage">
+    <div class="first-bg" id="first-bg">
+        <div class="container">
+            <div class="row">
+                <div class="title-text">
+                    <div class="col-md-12 headfontsize" >
+                        <h1 class="head-h1-content">
+                            这是一个无用的<br>
+                            测试页面<br>
+                            amazing!
+                        </h1>
+                        <p>只要你有信心, 相信程序对你而言, 小菜一碟<br>你一定是可以顺利拿下的</p>
+                        <p class="btn-app-store">
+                            <a class="btn btn-success btn-lg" href="#">立即注册, 开始学习</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="secondpage" id="secondpage">
+    <div class="second-text">
+        <h1 class="secondpage-text-h1">
+            选择你的第一节课程进行学习<%= image_tag("rails.png") %>
+        </h1>
+    </div>
+    <div class="row">
+        <div class="secondpage-courses col-md-4">
+            <%= link_to("#", :class => "course-one") do %>
+            <%= image_tag("html5_logo.png") %>
+            <div class="classicon">
+                <h3>认真学习哦</h3>
+                <h1>学习这个课程</h1>
+            </div>
+            <% end %>
+        </div>
+        <div class="secondpage-courses col-md-4">
+            <%= link_to( "#" , :class => "course-two") do %>
+                <%= image_tag("css3_logo.gif" )%>
+                <div class="classicon">
+                    <h3>认真学习哦</h3>
+                    <h1>学习这个课程</h1>
+                </div>
+            <% end %>
+        </div>
+        <div class="secondpage-courses col-md-4">
+            <%= link_to("#" , :class => "course-three") do %>
+                <%= image_tag("android.jpg") %>
+                <div class="classicon">
+                    <h3>认真学习哦</h3>
+                    <h1>学习这个课程</h1>
+                </div>
+            <% end %>
+        </div>
+    </div>
+    <div class="secondpagebtn">
+        <%= link_to "如果你想学习,点这里", "#", id: "secondpage-easy" ,  class: "btn btn-success btn-lg" %>
+    </div>
+</div>
+
+<div class="fourthpage" id="fourthpage">
+    <div class="container">
+        <div class="course-profile-text">
+            <h1>要干活, 必须工具要到位</h1>
+            <p>怎么样才能做到最快速的学习, 不知道.</p>
+        </div>
+        <div id="carousel-example-generic" class="carousel slide" data-interval="5000" >
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide="1" class=""></li>
+                <li data-target="#carousel-example-generic" data-slide="2" class=""></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <%= image_tag("android2.jpg") %>
+                </div>
+                <div class="item">
+                    <%= image_tag("android2.jpg") %>
+                </div>
+                <div class="item">
+                    <%= image_tag("android2.jpg") %>
+                </div>
+            </div>
+            <%= link_to("#carousel-example-generic", :class => "left carousel-control", "data-slide" => "prev") do %>
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            <% end %>
+            <%= link_to("#carousel-example-generic", :class => "right carousel-control", "data-slide" => "next") do %>
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            <% end %>
+
+        </div>
+    </div>
+</div>
+<div class="fifthpage" id="fifth">
+    <div class="fifthpage-bg" id="fifthpage">
+        <div class="container">
+            <div class="footer-text">
+                <h1>还在等待? 真有耐心</h1>
+            </div>
+            <div class="footer-btn-center">
+                <div class="row">
+                    <%= link_to("#") do %>
+                        <div class="col-md-4">
+                            <%= image_tag("android.jpg", :class => "footer-btn android-icon") %>
+                        </div>
+                    <% end %>
+                    <%= link_to("#") do %>
+                        <div class="col-md-4">
+                            <%= image_tag("android.jpg", :class => "footer-btn android-icon") %>
+                        </div>
+                    <% end %>
+                    <%= link_to("#") do %>
+                        <div class="col-md-4">
+                            <%= image_tag("android.jpg", :class => "footer-btn android-icon") %>
+                        </div>
+                    <% end %>
+                </div>
+            </div>
+            <div class="footer-text-btn">
+                <button type="button" class="btn btn-success btn-lg">我只是一个按钮而已</button>
+                <p class="footer-text-btn-text">
+                    下周安排: 调考, 经济师, 工资, 奖金, 奖金底表.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
