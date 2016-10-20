@@ -82,7 +82,7 @@ p {
 /* footer */
 
 footer {
-    margin-top: 45px;
+    margin-top:800px;
     padding-top: 5px;
     border-top: 1px solid $gray-medium-light;
     color: $gray-light;
@@ -262,6 +262,12 @@ span.picture {
   }
 }
 
+.container{
+  width:100%;
+  margin-left: 0px;
+  position: absolute;
+}
+
 .firstpage {
   h1, h3, p, a, button{
     font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino"
@@ -276,6 +282,7 @@ span.picture {
     position: absolute;
     background-position: center center;
     background-size: cover;
+    -moz-background-size: cover;
   }
 
   #first-bg {
@@ -298,7 +305,7 @@ span.picture {
   .title-text{
 
   }
-  p{
+o  p{
     margin-top: 30px;
     color: #ffffff;
     line-height: 30px;
@@ -381,15 +388,19 @@ span.picture {
 .fourthpage{
   text-align: center;
   width: 110%;
-  margin-left: -5%;
   margin-top: 100px;
-  height: 700px;
+  padding-top: 100px;
+  margin-left: -5%;
+  margin-right: -5%;
+  height: 1024px;
   background-color: #017747;
-  .container{
-    width: 70%;
+  .fourth-container{
+    width: 100%;
+    position: relative;
     .course-profile-text{
       color: #ffffff;
       margin-top: 100px;
+      margin-bottom: 0px;
       width: 100%;
       text-align: center;
       p{
@@ -407,6 +418,7 @@ span.picture {
   }
   .carousel-inner{
     .item{
+      margin-left:200px;
       width: 450px;
     }
   }
@@ -425,6 +437,7 @@ span.picture {
 // 调整左右slide按钮的渐变色, 覆盖了bootstrap的原有css
 // 用调试器定位到位置后替换
 .right.carousel-control{
+
   left: auto;
   right: 0;
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
@@ -436,16 +449,17 @@ span.picture {
 
 // 调整slide按钮的位置, 同渐变色一样, 也是覆盖了bootstrap的原有css
 .carousel-control .glyphicon-chevron-right {
-  right: -50%;
-  margin-right: -10px;
+  right: 40%;
+  margin-right: 0px;
 }
 .carousel-control .glyphicon-chevron-left {
-  left: -50%;
-  margin-left: -10px;
+  left: 40%;
+  margin-left: 0px;
 }
 
 
 .fifthpage{
+  width: 800px;
   .fifthpage-bg{
     height: 800px;
     width: 110%;
