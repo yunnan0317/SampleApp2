@@ -1,5 +1,5 @@
-@import "/home/yunnan/.rvm/gems/ruby-2.2.1/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/_bootstrap-sprockets.scss";
-@import "/home/yunnan/.rvm/gems/ruby-2.2.1/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap";
+@import "/Users/Namyun/.rvm/gems/ruby-2.2.5/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/_bootstrap-sprockets.scss";
+@import "/Users/Namyun/.rvm/gems/ruby-2.2.5/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap";
 
 /* mixins, variables, etc. */
 $gray-medium-light: #eaeaea;
@@ -148,6 +148,48 @@ aside {
 
 .gravatar_edit {
     margin-top: 15px;
+}
+
+.stats {
+  overflow: auto;
+  margin-top: 0;
+  padding: 0;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $gray-lighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      test-decoration: none;
+      color: blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  overfolow: auto;
+  margin-top: 10px;
+  .grvatar {
+    margin: 1px 1px;
+  }
+  a {
+    padding: 0;
+  }
+}
+
+.user.follow {
+  padding: 0;
 }
 
 /* forms */

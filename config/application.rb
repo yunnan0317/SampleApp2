@@ -1,3 +1,4 @@
+# coding: utf-8
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
@@ -22,5 +23,8 @@ module SampleApp
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # 在处理Ajax表单中添加真伪令牌
+    config.action_view.embed_authenticity_token_in_remote_forms = true
   end
 end
