@@ -16,4 +16,4 @@
 !/log/.keep
 /tmp
 
-./app/assets/stylesheets/custom.css.scss
+custom.css.scss
